@@ -1,0 +1,17 @@
+{
+    "name": "will/project",
+    "description": "Teste para vaga de Desenvolvedor Back-end",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Will\\Project\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "William Dumes",
+            "email": "william.dumes.job@gmail.com"
+        }
+    ],
+    "require": {}
+}
