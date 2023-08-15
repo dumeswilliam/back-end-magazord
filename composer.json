@@ -1,6 +1,5 @@
 {
     "name": "will/project",
-    "description": "Teste para vaga de Desenvolvedor Back-end",
     "type": "project",
     "autoload": {
         "psr-4": {
@@ -13,5 +12,9 @@
             "email": "william.dumes.job@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "doctrine/orm": "^2.16",
+        "symfony/cache": "^6.3",
+        "doctrine/annotations": "^2.0"
+    }
 }
