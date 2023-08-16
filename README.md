@@ -5,6 +5,7 @@ Necessário realizar a instalação dos seguintes sistemas:
 PHP 8.2.9 (https://www.php.net/downloads)
 PostgreSQL 15.4 (https://www.postgresql.org/download/)
 Composer (https://getcomposer.org/download/)
+GIT (https://git-scm.com)
 
 Após a instalação, torna-se necessário realizar a configuração do composer dentro do projeto:
 composer install
