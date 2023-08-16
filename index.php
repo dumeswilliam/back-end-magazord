@@ -21,6 +21,10 @@ $sProcess = $_SERVER['REQUEST_URI'];
 $aProcess = explode('?', $sProcess);
 $sProcess = reset($aProcess);
 
+if ($sProcess == '/') {
+    $sProcess = '/pessoa';
+}
+
 switch (true) {
     case in_array($sProcess, getActions('/pessoa')):
         $sProcess = str_replace('/pessoa', '', $sProcess);
