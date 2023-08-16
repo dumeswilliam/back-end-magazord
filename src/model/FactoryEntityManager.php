@@ -8,9 +8,9 @@ use \Doctrine\DBAL\DriverManager;
 use \Doctrine\ORM\EntityManager;
 use \Doctrine\ORM\ORMSetup;
 
-class FactoryEntityManager {
+abstract class FactoryEntityManager {
     
-    public function getEntityManager() :EntityManagerInterface {        
+    public static function getEntityManager() :EntityManagerInterface {        
         $oConfig = ORMSetup::createAnnotationMetadataConfiguration([__DIR__ . '/..'], Config::getInstance()->isDevMode());
         $oConnection = DriverManager::getConnection(Config::getInstance()->getDatabase(), $oConfig);
         return new EntityManager($oConnection, $oConfig);

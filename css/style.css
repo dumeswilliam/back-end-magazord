@@ -1,0 +1,38 @@
+body {
+    background: gray;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.center {
+    flex-direction: column;
+}
+
+.swal2-confirm {
+    background-color: rgb(48, 133, 214) !important;
+}
+
+.main {
+    justify-content: space-evenly;
+    width: 720px;
+}
+
+.linha_consulta {
+    height: 100%;
+}
+
+.linha_consulta.swal2-container {
+    position: initial;
+}
+
+.linha_consulta p {
+    width: 350px;
+}
+
+.linha_consulta a {
+    width: 90px;
+}

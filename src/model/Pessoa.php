@@ -27,15 +27,6 @@ class Pessoa {
      */
     private string $cpf;
 
-    /**
-     * @OneToMany(targetEntity="PessoaContato", mappedBy="cpf")
-     */
-    private ArrayCollection $contatos;
-
-    public function __construct() {
-        $this->contatos = new ArrayCollection();
-    }
-
     public function getNome() : string {
         return $this->nome;
     }
@@ -52,16 +43,6 @@ class Pessoa {
     public function setCpf($cpf) : self {
         $this->cpf = $cpf;
         return $this;
-    }
-
-    public function getContatos() : ArrayCollection {
-        return $this->contatos;
-    }
-
-    public function newContato() : PessoaContato {
-        $oContato = new PessoaContato();
-        $oContato->setPessoa($this);
-        return $oContato;
     }
 
 }

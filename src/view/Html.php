@@ -1,22 +1,22 @@
 <?php 
 namespace Will\Project\View;
 
-class Html {
+abstract class Html {
 
     public static function getPathCss() :string{
-        return __DIR__ . "../../css/";
+        return __DIR__ . "/../../css/";
     }
 
     public static function getPathJs() :string {
-        return __DIR__ . "../../js/";
+        return __DIR__ . "/../../js/";
     }
 
-    public function getSweetAlert() : void {
-        $sJs = self::getPathJs() . 'sweetalert2/dist/sweetalert2.all.min.js';
-        $sCss = self::getPathJs() . 'sweetalert2/dist/sweetalert2.min.css';
+    public static function init() :void {
+        include __DIR__ . '/InitHtml.php';
+    }
 
-        echo '<script src="' . $sJs . '"></script>';
-        echo '<link rel="stylesheet" href="' . $sCss . '">';
+    public static function end() :void {
+        include __DIR__ . '/EndHtml.php';
     }
 
 }

@@ -25,9 +25,9 @@ class PessoaContato {
     private int $id;
 
     /**
-     * @Column(type="smallint")
+     * @Column(type="string", length=20)
      */
-    private int $tipo;
+    private string $tipo;
     
     /**
      * @Column(type="string", length=100)
@@ -49,7 +49,7 @@ class PessoaContato {
         return $this;
     }
 
-    public function getTipo() : int {
+    public function getTipo() : string {
         return $this->tipo;
     }
 
